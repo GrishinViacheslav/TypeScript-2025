@@ -1,0 +1,122 @@
+@use "sass:math";
+// ==========================================================
+// Локальне підключення шрифтів
+@import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+// ==================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1290;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+body {
+  padding: toRem(50);
+  font-family: "ProximaNova", sans-serif;
+  font-size: toRem(18);
+  color: #000;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+/* ------------------------------------- */
+[class*="__container"] {
+  max-width: toRem($containerWidth);
+  padding-inline: toRem(15);
+  margin: 0 auto;
+}
+/* ------------------------------------- */
+.page {
+  // .page__task
+  &__task {
+  }
+  // .page__homework
+  &__homework {
+  }
+}
+.homework {
+  // .homework__title
+  &__title {
+    font-size: toRem(30);
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+  }
+  // .homework__body
+  &__body {
+  }
+  // .homework__list
+  &__list {
+  }
+  // .homework__item
+  &__item {
+    padding-block: toRem(15);
+    border-bottom: toRem(2) solid gray;
+  }
+}
+.item-homework {
+  // .item-homework__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+  // .item-homework__link
+  &__link {
+    font-size: toRem(24);
+    font-weight: 500;
+    color: rgb(175, 6, 6);
+    transition: color 0.4;
+    position: relative;
+    &:hover {
+      color: rgb(235, 8, 8);
+    }
+  }
+  // .item-homework__text
+  &__text {
+    line-height: 1.3;
+  }
+}
+
+.task {
+  margin-bottom: toRem(20);
+  // .task__title
+  &__title {
+    font-size: toRem(26);
+    line-height: 1.2;
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+  // .task__desc
+  &__desc {
+  }
+}
+
+.product__line {
+  display: flex;
+  align-items: center;
+  gap: toRem(25);
+  span {
+    flex: 1 1 toRem(100);
+  }
+}
