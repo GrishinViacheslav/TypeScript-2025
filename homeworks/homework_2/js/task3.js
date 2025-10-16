@@ -69,5 +69,15 @@ if (confirm("Почати тестування?")) {
         }
         return result;
     }
+    try {
+        const season = getSeason;
+        document.write(`Сезон - ${season(3)}`);
+        document.write(`Сезон - ${season(20)}`);
+        document.write(`Сезон - ${season('jun')}`);
+        document.write(`Сезон - ${season('junsdv')}`);
+    }
+    catch (error) {
+        console.error(`Error!`, error instanceof Error ? error.message : "Unknown error");
+    }
 }
 
