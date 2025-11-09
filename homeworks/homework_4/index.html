@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Homework 4</title>
+	</head>
+	<body>
+		<header class="header"></header>
+		<main class="page">
+			<div class="page__homework homework">
+				<div class="homework__body">
+					<h1 class="homework__title">ДЗ №4</h1>
+					<ol class="homework__list">
+						<li class="homework__item item-homework">
+							<h3 class="item-homework__title">
+								<a class="item-homework__link" href="pages/task1.html">Задача 1.</a>
+							</h3>
+							<p class="item-homework__text">
+								Описати тип квиток (куди, ціна, піб пасажира, дата). Створити функції
+								для перевірки цього типу (Type Guard, Assert)
+							</p>
+						</li>
+						<li class="homework__item item-homework">
+							<h3 class="item-homework__title">
+								<a class="item-homework__link" href="pages/task2.html">Задача 2.</a>
+							</h3>
+							<p class="item-homework__text">
+								Обробка Фінансових Транзакцій
+								Клас: Transaction (Транзакція). Містить поля: id, amount, date, type,
+								description. Містить метод для валідації суми.
+								Enum: TransactionType (ТипТранзакції). Визначає напрямок або вид
+								транзакції: DEPOSIT (Поповнення), WITHDRAWAL (Зняття), TRANSFER
+								(Переказ).
+							</p>
+						</li>
+						<li class="homework__item item-homework">
+							<h3 class="item-homework__title">
+								<a class="item-homework__link" href="pages/task3.html">Задача 3.</a>
+							</h3>
+							<p class="item-homework__text">
+								Конфігуратор бази даних
+								Інтерфейс: IDatabaseConfig – визначає необхідні параметри підключення
+								(host: string, port: number, username: string, password?: string).
+								Клас: DBConnection – містить приватне поле config: IDatabaseConfig і
+								метод connect(). Клас використовує конфігурацію, тип якої задано
+								інтерфейсом.
+							</li>
+							<li class="homework__item item-homework">
+								<h3 class="item-homework__title">
+									<a class="item-homework__link" href="pages/task4.html">Задача 4.</a>
+								</h3>
+								<p class="item-homework__text">
+									Менеджер стану користувача
+									Клас: UserManager
+									Складний тип: Визначення типу UserStatus.
+									type UserStatus = { state: 'online', lastActive: Date } | { state:
+									'offline', lastActive: Date } | { state: 'away' }; (Об'єднання для
+									різних станів)
+									Метод: setUserStatus(id: number, status: UserStatus)
+								</p>
+							</li>
+							<li class="homework__item item-homework">
+								<h3 class="item-homework__title">
+									<a class="item-homework__link" href="pages/task5.html">Задача 5.</a>
+								</h3>
+								<p class="item-homework__text">
+									Валідація величин без створення екземпляра.Статичний метод дозволяє
+									перевіряти дані перед створенням об’єкта.
+								</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</main>
+			<footer class="footer"></footer>
+			<script type="module"></script>
+		</body>
+	</html>

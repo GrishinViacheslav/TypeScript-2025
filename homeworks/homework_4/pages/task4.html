@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Кодування тексту -->
+		<meta charset="UTF-8">
+		<!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Підключення окремого файлу стилів -->
+		<!-- Заголовок сторінки в браузері -->
+		<title>Task 4.</title>
+	</head>
+	<body>
+		<header class="header">
+		</header>
+		<main class="page">
+			<div class="page__task task">
+				<h1 class="task__title">Задача 4</h1>
+				<p class="task__desc">
+					Система управління сповіщеннями
+					Клас: NotificationService
+					Складний тип: Визначення типу NotificationPayload.
+					EmailPayload = { recipient: string, subject: string }
+					SMSPayload = { phone: string, text: string }
+					Об'єднання та Перетин: NotificationPayload = ({ type: 'email' } &
+					EmailPayload) | ({ type: 'sms' } & SMSPayload) (Дискримінаційне об'єднання
+					для безпечної роботи з різними типами сповіщень)
+					Метод: sendNotification(payload: NotificationPayload)
+				</p>
+			</div>
+		</main>
+		<footer class="footer">
+		</footer>
+		<script type="module" src="../js/task4/task4.js"></script>
+	</body>
+</html>

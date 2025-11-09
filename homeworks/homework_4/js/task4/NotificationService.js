@@ -1,0 +1,19 @@
+import errorFunc from "../errorFunc.js";
+export default class NotificationService {
+    constructor(payload) {
+        this.payload = payload;
+        this.payload = payload;
+    }
+    sendNotification() {
+        switch (this.payload.type) {
+            case "email":
+                console.log(`Email to recipient ${this.payload.recipient} with subject '${this.payload.subject}'`);
+                break;
+            case "sms":
+                console.log(`Sms to phone ${this.payload.phone} with text '${this.payload.text}'`);
+                break;
+            default:
+                errorFunc(`Incorrect data`);
+        }
+    }
+}
